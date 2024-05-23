@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto py-12">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="relative">
+                <img src="{{ product.image.url }}" alt="Product Image" class="w-full h-30 object-cover">
+                <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full">
+                    {{ product.rate }}
+                </div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2">{{ product.name }}</h2>
+                <p class="text-gray-700 text-lg mb-4">{{ product.description }}</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900">{{ product.price }}</span>
+                    <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
